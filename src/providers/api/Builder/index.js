@@ -51,6 +51,21 @@ const Builder = (resource, extraProps) => ({
     return new Promise(resolve => delayFn(() => resolve({ data: entity })));
   },
 
+  // update is an evil method
+  // it just filter out the old one and resaves a whole new one
+  // but with the same id
+  update: (updatedModel) => {
+    const currentDb = getDb();
+    const options = currentDb[resource];
+
+    // filter out the model
+    const filteredOptions = options.filter(option => (updatedModel.id.toString() !== option.id.toString()));
+    filteredOptions.push(updatedModel);
+   
+    setDb(resource, filteredOptions);
+    return new Promise(resolve => delayFn(() => resolve({ data: updatedModel })));
+  },
+
   destroy: (id) => {
     const currentDb = getDb;
     const options = currentDb[resource];
