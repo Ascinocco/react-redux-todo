@@ -1,0 +1,49 @@
+{
+  "todoLists": [
+    {
+      "id": "1",
+      "title": "Default Todo List",
+      "description": "A place for all your todo's that don't make sense anywhere else",
+      "todos": [
+        {
+          "id": "1",
+          "title": "Get started with Redux",
+          "description": "Watch the rest of the Udemy course and build out your sample app",
+          "complete": false,
+          "priority": "HIGH",
+          "notes": [
+            {
+              "id": "1",
+              "description": "That wes bos guy has some good courses"
+            },
+            {
+              "id": "2",
+              "description": "Ask Kaio all the things!"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "Eat Dinner",
+          "description": "Subway today?",
+          "complete": false,
+          "priority": "MEDIUM",
+          "notes": [
+            {
+              "id": "1",
+              "description": "Steak and cheese with chipolte mayo sounds gooooooood"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "title": "Watch BoJack Horseman",
+          "description": "The new season 4 just came out! Binge watch it on netflix",
+          "complete": false,
+          "priority": "LOW",
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
